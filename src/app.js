@@ -28,6 +28,10 @@ function showWeather(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
   document.querySelector("#last-update").innerHTML = formatDate(new Date());
+  let iconElement = document.querySelector("#icon");
+  console.log(iconElement)
+  iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute("alt", response.data.weather[0].description)
 }
 
 function updateWeatherReport(event) {
