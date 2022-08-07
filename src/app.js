@@ -27,7 +27,7 @@ function showWeather(response) {
   document.querySelector("#degrees").innerHTML = Math.round(response.data.main.temp);
   temperatureCelsius = Math.round(response.data.main.temp);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = response.data.wind.speed;
+  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("#last-update").innerHTML = formatDate(new Date());
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
