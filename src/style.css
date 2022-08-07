@@ -16,3 +16,6 @@ input {
 img {
     height:fit-content;
 }
+.active {
+    color: black;
+}
