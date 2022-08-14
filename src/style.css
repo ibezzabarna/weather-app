@@ -19,3 +19,24 @@ img {
 .active {
     color: black;
 }
+ul {
+    list-style: none;
+    padding: 0 !important;
+}
+li {
+    text-align: center;
+    
+}
+.weather-icon {
+    width: 50px;
+}
+.temp-max {
+    font-weight: bold;
+}
+.temp-max, .temp-min {
+font-size: 12px;
+}
+.weather-icon {
+    display: block;
+    margin: 0 auto;
+}

@@ -23,31 +23,33 @@
             <!-- weather info -->
             <form class="row gx-0 mb-3" id="search"> 
                 <div class="col-9"> 
-                    <input class="form-control" id="city-input" type="text" placeholder="Lisbon">
+                    <input class="form-control" id="city-input" type="text" placeholder="Zhytomyr" value="Zhytomyr">
                 </div>
                 <button class="col-2 offset-1 btn btn-primary" type="submit">Search</button>
             </form>
             <div class="row gx-0 mb-3">
-                <h1 class="p-0 m-0" id="city-name">Lisbon</h1>
-                <span>Last updated: <span id="last-update">Tuesday October 2</span></span>
-                <span id="description">Clear sky</span>
+                <h1 class="p-0 m-0" id="city-name"></h1>
+                <span>Last updated: <span id="last-update"></span></span>
+                <span id="description"></span>
             </div>
             <div class="row gx-0">
                 <div class="col-6 d-flex">
-                    <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="clear sky" id = "icon"> 
-                    <p id="degrees" class="display-1 mb-0">24</p>°
+                    <img src="" alt="" id = "icon"> 
+                    <p id="degrees" class="display-1 mb-0"></p>°
                     <a href id="celsius" class="scale">C</a> | 
                     <a href id="fahrenheit" class="scale">F</a>
                 </div>
                 <div class="col-6">
                     <ul class="list-unstyled m-0">
-                        <li>Humidity: <span id="humidity">63</span>%</li>
-                        <li>Wind: <span id="wind"></span>4 km/h</li>
+                        <li>Humidity: <span id="humidity"></span>%</li>
+                        <li>Wind: <span id="wind"></span> km/h</li>
                     </ul>
                 </div>
             </div>
+            <ul id="forecast" class="row">
+            </ul>
         </div>
-        <small><a href="">Open-source code</a> by Ilona Bezzabarna</small>
+        <small><a href="https://github.com/ibezzabarna/weather-app">Open-source code</a> by Ilona Bezzabarna</small>
     </div>
     <script src="src/app.js"></script>
 </body>
