@@ -1,5 +1,4 @@
 let apiKey = "7088414aa37808a4d53d7a27451c98c2";
-let temperatureCelsius = 24;
 
 function formatDate(dateObj) {
   let days = [
@@ -82,26 +81,6 @@ function updateWeatherPage(response) {
   //show forecast 
   showForecast(response.data.daily.slice(1, 7))
 }
-    
-function convertToFahrenheit(celsius) {
-  let temperatureFahrenheit = celsius * 9 / 5 + 32;
-  return Math.round(temperatureFahrenheit);
-}
-
-function displayTemperatureCelsius(event) {
-  event.preventDefault();
-  event.target.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  document.querySelector("#degrees").innerHTML = temperatureCelsius;
-}
-
-function displayTemperatureFahrenheit(event) {
-  event.preventDefault();
-  event.target.classList.add("active");
-  celsiusLink.classList.remove("active");
-  let temperatureFahrenheit = convertToFahrenheit(temperatureCelsius);
-  document.querySelector("#degrees").innerHTML = temperatureFahrenheit;
-}
 
 function getWeatherForecast(response) {
   //update weather
@@ -134,9 +113,3 @@ updateWeatherReport();
 
 let form = document.querySelector("#search");
 form.addEventListener("submit", formSubmit);
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", displayTemperatureFahrenheit);
-
-let celsiusLink= document.querySelector("#celsius");
-celsiusLink.addEventListener("click", displayTemperatureCelsius);

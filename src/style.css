@@ -10,14 +10,8 @@ div {
 input {
     padding: 0 12px;
 }
-.scale {
-    text-decoration: none;
-}
 img {
     height:fit-content;
-}
-.active {
-    color: black;
 }
 ul {
     list-style: none;
@@ -25,7 +19,6 @@ ul {
 }
 li {
     text-align: center;
-    
 }
 .weather-icon {
     width: 50px;
